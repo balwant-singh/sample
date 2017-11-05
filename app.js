@@ -24,6 +24,8 @@ app.use('/api', route);
 //static files
 app.use(express.static(path.join(__dirname, 'public')))
 
+app.use('/lib', express.static(__dirname + '/node_modules/'));
+
 //testing Server
 app.get('/',(req, res)=>{
     res.send('foobar');
